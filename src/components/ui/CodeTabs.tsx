@@ -47,9 +47,10 @@ export function CodeTabs({ code, renderedCode }: CodeTabsProps) {
         </div>
         <button
           onClick={handleCopy}
+          aria-label={copied ? 'Code copied' : 'Copy code'}
           className="text-xs text-[var(--ink-4)] hover:text-[var(--ink)] px-3 py-1.5 rounded transition-colors"
         >
-          {copied ? 'Copied!' : 'Copy'}
+          <span aria-live="polite" aria-atomic="true">{copied ? 'Copied!' : 'Copy'}</span>
         </button>
       </div>
 

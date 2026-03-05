@@ -6,7 +6,7 @@ export interface CategoryInfo {
   description: string;
   color: string;     // hex color for accent
   bgColor: string;   // hex for background tint
-  icon: string;      // emoji
+  icon: string;      // lucide icon name
   order: number;     // display order
 }
 
@@ -17,7 +17,7 @@ export const CATEGORIES: CategoryInfo[] = [
     description: 'Algorithms that arrange elements in a specific order',
     color: '#6366f1',
     bgColor: '#eef2ff',
-    icon: '↕️',
+    icon: 'ArrowUpDown',
     order: 1,
   },
   {
@@ -26,7 +26,7 @@ export const CATEGORIES: CategoryInfo[] = [
     description: 'Algorithms for finding elements in data structures',
     color: '#d97706',
     bgColor: '#fffbeb',
-    icon: '🔍',
+    icon: 'Search',
     order: 2,
   },
   {
@@ -35,7 +35,7 @@ export const CATEGORIES: CategoryInfo[] = [
     description: 'Operations on linked node structures',
     color: '#0891b2',
     bgColor: '#ecfeff',
-    icon: '🔗',
+    icon: 'Link2',
     order: 3,
   },
   {
@@ -44,7 +44,7 @@ export const CATEGORIES: CategoryInfo[] = [
     description: 'Hierarchical data structures and their algorithms',
     color: '#10b981',
     bgColor: '#ecfdf5',
-    icon: '🌳',
+    icon: 'GitBranch',
     order: 4,
   },
   {
@@ -53,7 +53,7 @@ export const CATEGORIES: CategoryInfo[] = [
     description: 'Graph traversal, shortest paths, and spanning trees',
     color: '#7c3aed',
     bgColor: '#f5f3ff',
-    icon: '🕸️',
+    icon: 'Share2',
     order: 5,
   },
   {
@@ -62,7 +62,7 @@ export const CATEGORIES: CategoryInfo[] = [
     description: 'Optimization using memoization and tabulation',
     color: '#e11d48',
     bgColor: '#fff1f2',
-    icon: '📊',
+    icon: 'LayoutGrid',
     order: 6,
   },
   {
@@ -71,7 +71,7 @@ export const CATEGORIES: CategoryInfo[] = [
     description: 'Locally optimal choices that yield global solutions',
     color: '#06b6d4',
     bgColor: '#ecfeff',
-    icon: '💰',
+    icon: 'TrendingUp',
     order: 7,
   },
   {
@@ -80,7 +80,7 @@ export const CATEGORIES: CategoryInfo[] = [
     description: 'Exhaustive search with pruning',
     color: '#ea580c',
     bgColor: '#fff7ed',
-    icon: '🔄',
+    icon: 'CornerUpLeft',
     order: 8,
   },
   {
@@ -89,7 +89,7 @@ export const CATEGORIES: CategoryInfo[] = [
     description: 'Tries, string matching, union-find, and more',
     color: '#64748b',
     bgColor: '#f8fafc',
-    icon: '⚡',
+    icon: 'Cpu',
     order: 9,
   },
 ];

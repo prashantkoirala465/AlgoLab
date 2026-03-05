@@ -38,7 +38,7 @@ export function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]/50 ${
                   active
                     ? 'bg-[var(--accent-bg)] text-[var(--accent)]'
                     : 'text-[var(--ink-2)] hover:text-[var(--ink)] hover:bg-[var(--bg-warm)]'
@@ -63,7 +63,7 @@ export function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            className="p-2 rounded-md text-[var(--ink-3)] hover:text-[var(--ink)] hover:bg-[var(--bg-warm)] transition-colors"
+            className="p-2 rounded-md text-[var(--ink-3)] hover:text-[var(--ink)] hover:bg-[var(--bg-warm)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]/50"
           >
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
           </button>

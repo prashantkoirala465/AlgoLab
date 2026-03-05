@@ -16,6 +16,15 @@ export function Footer() {
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--ink-3)]">
             <Link href="/" className="hover:text-[var(--ink)] transition-colors">Algorithms</Link>
             <Link href="/compare" className="hover:text-[var(--ink)] transition-colors">Compare</Link>
+            <a
+              href="https://github.com/prashantkoirala465/AlgoLab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--ink)] transition-colors flex items-center gap-1"
+            >
+              <Github size={13} aria-hidden="true" />
+              GitHub
+            </a>
           </nav>
 
           {/* Copyright */}
