@@ -24,6 +24,16 @@ const GraphVisualizer = dynamic(() =>
   { ssr: false, loading: () => <VisualizerSkeleton /> }
 );
 
+const LinkedListVisualizer = dynamic(() =>
+  import('./LinkedListVisualizer').then(m => ({ default: m.LinkedListVisualizer })),
+  { ssr: false, loading: () => <VisualizerSkeleton /> }
+);
+
+const DPVisualizer = dynamic(() =>
+  import('./DPVisualizer').then(m => ({ default: m.DPVisualizer })),
+  { ssr: false, loading: () => <VisualizerSkeleton /> }
+);
+
 function VisualizerSkeleton() {
   return (
     <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] h-72 animate-pulse" />
@@ -88,6 +98,24 @@ export function VisualizerPanel({ visualizerType, slug }: VisualizerPanelProps) 
       <div className="mb-8">
         {title}
         <GraphVisualizer />
+      </div>
+    );
+  }
+
+  if (visualizerType === 'linked-list') {
+    return (
+      <div className="mb-8">
+        {title}
+        <LinkedListVisualizer />
+      </div>
+    );
+  }
+
+  if (visualizerType === 'dp') {
+    return (
+      <div className="mb-8">
+        {title}
+        <DPVisualizer />
       </div>
     );
   }
