@@ -1264,3 +1264,11 @@ export function getAlgorithmsByCategory(category: Category): Algorithm[] {
 export function getAllSlugs(): string[] {
   return ALGORITHMS.map(a => a.slug);
 }
+
+export function getRelatedAlgorithms(slug: string): Algorithm[] {
+  const algo = getAlgorithm(slug);
+  if (!algo) return [];
+  return algo.relatedAlgorithms
+    .map(s => getAlgorithm(s))
+    .filter((a): a is Algorithm => a !== undefined);
+}
