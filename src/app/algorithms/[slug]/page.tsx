@@ -9,6 +9,7 @@ import type { AlgorithmCode, Algorithm } from '@/data/types';
 import Link from 'next/link';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
 import { MarkDoneButton } from '@/components/ui/MarkDoneButton';
+import { QuizPanel } from '@/components/ui/QuizPanel';
 
 // ─── Static generation ───────────────────────────────────────────────────────
 
@@ -194,6 +195,12 @@ export default async function AlgorithmPage({ params }: { params: Promise<{ slug
           </div>
         </div>
       )}
+
+      {/* Quiz */}
+      <div className="mb-8">
+        <h2 className="text-lg font-semibold text-[var(--ink)] mb-4">Test Your Knowledge</h2>
+        <QuizPanel slug={algo.slug} />
+      </div>
 
       {/* Back link */}
       <Link
