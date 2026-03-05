@@ -14,6 +14,16 @@ const SearchVisualizer = dynamic(() =>
   { ssr: false, loading: () => <VisualizerSkeleton /> }
 );
 
+const TreeVisualizer = dynamic(() =>
+  import('./TreeVisualizer').then(m => ({ default: m.TreeVisualizer })),
+  { ssr: false, loading: () => <VisualizerSkeleton /> }
+);
+
+const GraphVisualizer = dynamic(() =>
+  import('./GraphVisualizer').then(m => ({ default: m.GraphVisualizer })),
+  { ssr: false, loading: () => <VisualizerSkeleton /> }
+);
+
 function VisualizerSkeleton() {
   return (
     <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] h-72 animate-pulse" />
@@ -60,6 +70,24 @@ export function VisualizerPanel({ visualizerType, slug }: VisualizerPanelProps) 
       <div className="mb-8">
         {title}
         <SearchVisualizer />
+      </div>
+    );
+  }
+
+  if (visualizerType === 'tree') {
+    return (
+      <div className="mb-8">
+        {title}
+        <TreeVisualizer />
+      </div>
+    );
+  }
+
+  if (visualizerType === 'graph') {
+    return (
+      <div className="mb-8">
+        {title}
+        <GraphVisualizer />
       </div>
     );
   }
