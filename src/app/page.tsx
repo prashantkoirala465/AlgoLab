@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <main>
-      <h1>AlgoLab</h1>
-    </main>
-  );
+import { HomeContent } from '@/components/home/HomeContent';
+
+export default function HomePage() {
+  return <HomeContent />;
 }

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* ── Light mode tokens ─────────────────────────────────────────────────────── */
 :root {
   --bg: #f6f5f1;
   --bg-warm: #efeee8;
@@ -23,6 +24,31 @@
   --rose-bg: #fff1f2;
 }
 
+/* ── Dark mode tokens ──────────────────────────────────────────────────────── */
+.dark {
+  --bg: #141412;
+  --bg-warm: #1c1b18;
+  --surface: #1f1e1b;
+  --border: #2e2c28;
+  --border-light: #252320;
+  --ink: #f0ede8;
+  --ink-2: #c4bfb8;
+  --ink-3: #8a857e;
+  --ink-4: #5a5750;
+  --accent: #3b82f6;
+  --accent-bg: #1a2a4a;
+  --accent-dark: #60a5fa;
+  --emerald: #34d399;
+  --emerald-bg: #0a2a1e;
+  --amber: #fbbf24;
+  --amber-bg: #2a1f05;
+  --violet: #a78bfa;
+  --violet-bg: #1e1433;
+  --rose: #fb7185;
+  --rose-bg: #2a0a10;
+}
+
+/* ── Tailwind v4 theme mapping ─────────────────────────────────────────────── */
 @theme inline {
   --color-bg: var(--bg);
   --color-bg-warm: var(--bg-warm);
@@ -45,3 +71,32 @@
   --color-rose: var(--rose);
   --color-rose-bg: var(--rose-bg);
 }
+
+/* ── Base styles ───────────────────────────────────────────────────────────── */
+html {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-bg);
+  color: var(--accent-dark);
+}
+
+/* Scrollbar (light track) */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-warm); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ink-4); }
