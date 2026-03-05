@@ -20,13 +20,10 @@
   --violet: #7c3aed;
   --violet-bg: #f5f3ff;
   --rose: #e11d48;
+  --rose-bg: #fff1f2;
 }
 
 @theme inline {
-  --font-serif: 'Source Serif 4', Georgia, serif;
-  --font-sans: Inter, -apple-system, system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', Menlo, monospace;
-
   --color-bg: var(--bg);
   --color-bg-warm: var(--bg-warm);
   --color-surface: var(--surface);
@@ -46,4 +43,5 @@
   --color-violet: var(--violet);
   --color-violet-bg: var(--violet-bg);
   --color-rose: var(--rose);
+  --color-rose-bg: var(--rose-bg);
 }
