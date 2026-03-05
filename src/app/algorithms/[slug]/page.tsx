@@ -4,9 +4,10 @@ import { ALGORITHMS, getAlgorithm, getRelatedAlgorithms } from '@/data/algorithm
 import { getCategoryInfo } from '@/data/categories';
 import { createHighlighter } from 'shiki';
 import { CodeTabs } from '@/components/ui/CodeTabs';
+import { VisualizerPanel } from '@/components/visualizers/VisualizerPanel';
 import type { AlgorithmCode, Algorithm } from '@/data/types';
 import Link from 'next/link';
-import { ChevronRight, Clock, Database, ArrowLeft } from 'lucide-react';
+import { ChevronRight, ArrowLeft } from 'lucide-react';
 
 // ─── Static generation ───────────────────────────────────────────────────────
 
@@ -137,6 +138,9 @@ export default async function AlgorithmPage({ params }: { params: Promise<{ slug
           )}
         </div>
       </div>
+
+      {/* Visualizer */}
+      <VisualizerPanel visualizerType={algo.visualizerType} slug={algo.slug} />
 
       {/* Code */}
       <div className="mb-8">
