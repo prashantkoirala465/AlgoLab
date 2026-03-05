@@ -8,6 +8,7 @@ import { VisualizerPanel } from '@/components/visualizers/VisualizerPanel';
 import type { AlgorithmCode, Algorithm } from '@/data/types';
 import Link from 'next/link';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
+import { MarkDoneButton } from '@/components/ui/MarkDoneButton';
 
 // ─── Static generation ───────────────────────────────────────────────────────
 
@@ -118,6 +119,9 @@ export default async function AlgorithmPage({ params }: { params: Promise<{ slug
         <p className="text-[var(--ink-2)] text-base leading-relaxed max-w-2xl">
           {algo.longDescription}
         </p>
+        <div className="mt-4">
+          <MarkDoneButton slug={algo.slug} />
+        </div>
       </div>
 
       {/* Complexity table */}
